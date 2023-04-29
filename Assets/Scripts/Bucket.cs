@@ -12,7 +12,7 @@ public class Bucket : MonoBehaviour
         ballsLeft = ballsNeeded;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.TryGetComponent<Ball>(out Ball ball))
         {
