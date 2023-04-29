@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class GameManager: Singleton<GameManager>
 {
-    GameState gameState = GameState.PRE_GAME;
+    GameState gameState;
 
     public static event Action<GameState> OnGameStateChanged;
     
     void Awake()
     {
-        
+        ChangeState(GameState.IN_GAME);
     }
 
     public void ChangeState(GameState newState)

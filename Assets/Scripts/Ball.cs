@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    int ballGroup = 0;  // TODO: add ball group to color mapping
 
-    // Update is called once per frame
-    void Update()
+    public static GameObject ballPrefab;
+
+    public static Ball CreateBall(int ballGroup)
     {
-        
+        GameObject ballObject = Instantiate(ballPrefab);
+        Ball ball = ballObject.GetComponent<Ball>();
+        ball.ballGroup = ballGroup;
+        return ball;
     }
 }
