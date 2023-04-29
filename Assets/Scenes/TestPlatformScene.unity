@@ -188,7 +188,8 @@ MonoBehaviour:
   - {fileID: 1480594039}
   - {fileID: 471749866}
   moveSpeed: 5
-  rb: {fileID: 0}
+  rb: {fileID: 1382812587}
+  buttonName: A
 --- !u!4 &659726496
 Transform:
   m_ObjectHideFlags: 0
@@ -466,7 +467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619530103}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Waypoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
