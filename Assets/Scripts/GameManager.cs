@@ -53,12 +53,12 @@ public class GameManager: Singleton<GameManager>
 
     public void HandleGameWon()
     {
-        
+        Debug.Log("Game won!");
     }
 
     public void HandleGameLost()
     {
-
+        Debug.Log("Game lost!");
     }
 }
 

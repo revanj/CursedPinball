@@ -12,6 +12,11 @@ public class Bucket : MonoBehaviour
         ballsLeft = ballsNeeded;
     }
 
+    void Start()
+    {
+        BucketManager.Instance.RegisterBucket(this);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.TryGetComponent<Ball>(out Ball ball))
@@ -20,6 +25,10 @@ public class Bucket : MonoBehaviour
         }
         ballsLeft--;
         ballsLeft = Mathf.Max(0, ballsLeft);
+        if (IsFull())
+        {
+            BucketManager.Instance.AddFullBucket(this);
+        }
     }
 
     public bool IsFull()
