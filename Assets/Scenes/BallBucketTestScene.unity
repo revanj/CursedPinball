@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 4733776784988908157, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4733776784988908159, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -285,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4733776784988908159, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4733776784988908159, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_LocalPosition.z
