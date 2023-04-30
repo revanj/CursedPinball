@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class TranslatePlatformSpring : MonoBehaviour
+public class TranslatePlatformSpring : Platform, ITranslateable
 {
     [SerializeField] private List<Transform> wayPoints;
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private string buttonName;
+    public List<Transform> WayPoints => wayPoints;
+
 
     private int _moveDirection = 1;
     
@@ -18,12 +17,12 @@ public class TranslatePlatformSpring : MonoBehaviour
     private void Start()
     {
         _currentWayPoint = 0;
-        rb.MovePosition(wayPoints[0].position);
+        rb.MovePosition(WayPoints[0].position);
     }
 
     void FixedUpdate()
     {
-        if (Input.GetKey(CustomUtils.ParseKeyCode(buttonName)))
+        if (Input.GetKey(keyCode))
         {
             _moveDirection = 1;
         }
@@ -32,14 +31,14 @@ public class TranslatePlatformSpring : MonoBehaviour
             _moveDirection = -1;
         }
         
-        if ((_moveDirection == 1 && _currentWayPoint == wayPoints.Count)
+        if ((_moveDirection == 1 && _currentWayPoint == WayPoints.Count)
             || (_moveDirection == -1 && _currentWayPoint == 0))
         {
             return;
         }
         var position = rb.transform.position;
         var targetWayPoint = _moveDirection == 1 ? _currentWayPoint : _currentWayPoint - 1;
-        var wayPointPos = wayPoints[targetWayPoint].transform.position;
+        var wayPointPos = WayPoints[targetWayPoint].transform.position;
         var target =
             Vector3.MoveTowards(
                 position, 
@@ -48,7 +47,7 @@ public class TranslatePlatformSpring : MonoBehaviour
         rb.MovePosition(target);
         if (
             Vector3.Distance(
-                wayPoints[targetWayPoint].transform.position,
+                WayPoints[targetWayPoint].transform.position,
                 rb.transform.position) <= 0.1
         )
         {
@@ -60,9 +59,9 @@ public class TranslatePlatformSpring : MonoBehaviour
             _currentWayPoint = 0;
         }
 
-        if (_currentWayPoint == wayPoints.Count)
+        if (_currentWayPoint == WayPoints.Count)
         {
-            _currentWayPoint = wayPoints.Count - 1;
+            _currentWayPoint = WayPoints.Count - 1;
         }
     }
 }
