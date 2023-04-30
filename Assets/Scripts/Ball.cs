@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Ball : MonoBehaviour
 {
-    int ballGroup = 0;  // TODO: add ball group to color mapping
 
+    public ColorSO colorSO;
     public static GameObject ballPrefab;
 
-    public static Ball CreateBall(int ballGroup)
+    void Init(ColorSO colorSO){
+        this.colorSO = colorSO;
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if(spriteRenderer) spriteRenderer.color = colorSO.color;
+    }
+    public static Ball CreateBall(ColorSO colorSO)
     {
         GameObject ballObject = Instantiate(ballPrefab);
         Ball ball = ballObject.GetComponent<Ball>();
-        ball.ballGroup = ballGroup;
+        ball.Init(colorSO);
         return ball;
     }
 }

@@ -1,15 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class Bucket : MonoBehaviour
 {
+    [SerializeField] [Required]
+    ColorSO colorSO;
+
     [SerializeField] int ballsNeeded = 1;
     int ballsLeft;
+
 
     void Awake()
     {
         ballsLeft = ballsNeeded;
+        //get sprite renderer in all children
+        SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers)
+        {
+            spriteRenderer.color = colorSO.color;
+        }
     }
 
     void Start()
@@ -20,6 +31,10 @@ public class Bucket : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.TryGetComponent<Ball>(out Ball ball))
+        {
+            return;
+        }
+        if(ball.colorSO != colorSO)
         {
             return;
         }
