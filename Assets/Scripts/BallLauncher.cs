@@ -31,6 +31,7 @@ public class BallLauncher : MonoBehaviour
         Ball ball = Ball.CreateBall(ballGroup);
         ball.transform.position = transform.position;
         Vector2 launchDirection = (launchAtPoint.position - transform.position).normalized;
+        // Vector2 launchDirection = launchAtPoint.transform.rotation;
         ball.GetComponent<Rigidbody2D>().velocity = launchDirection * launchSpeed;
     }
 }
