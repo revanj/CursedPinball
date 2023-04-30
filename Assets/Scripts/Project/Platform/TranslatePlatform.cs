@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class TranslatePlatform : MonoBehaviour
+public class TranslatePlatform : Platform, ITranslateable
 {
+
     [SerializeField] private List<Transform> wayPoints;
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private string buttonName;
-    
+    public List<Transform> WayPoints => wayPoints;
+
+
     private int _currentWayPoint = 0;
     
 
     private void Start()
     {
         _currentWayPoint = 0;
-        rb.MovePosition(wayPoints[0].position);
+        rb.MovePosition(WayPoints[0].position);
     }
 
     void FixedUpdate()
     {
-        if (!Input.GetKey(CustomUtils.ParseKeyCode(buttonName)))
+        if (!Input.GetKey(keyCode))
         {
             return;
         }
@@ -29,20 +29,20 @@ public class TranslatePlatform : MonoBehaviour
         var target =
             Vector3.MoveTowards(
                 position, 
-                wayPoints[_currentWayPoint].transform.position,
+                WayPoints[_currentWayPoint].transform.position,
                 moveSpeed * Time.fixedDeltaTime);
         rb.MovePosition(target);
         if (
             Vector3.Distance(
-                wayPoints[_currentWayPoint].transform.position,
+                WayPoints[_currentWayPoint].transform.position,
                 rb.transform.position) <= 0.1
             )
         {
             _currentWayPoint++;
         }
-        if (_currentWayPoint == wayPoints.Count)
+        if (_currentWayPoint == WayPoints.Count)
         {
-            wayPoints.Reverse();
+            WayPoints.Reverse();
             _currentWayPoint = 0;
         }
     }
