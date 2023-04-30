@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager: Singleton<GameManager>
 {
+    [SerializeField] float timeAfterLosingToRestart = 1f;
+    
     GameState gameState;
 
     public static event Action<GameState> OnGameStateChanged;
@@ -46,19 +49,46 @@ public class GameManager: Singleton<GameManager>
         }
     }
 
-    public void HandlePreGame()
+    public void TryChangeToWinState()
+    {
+        if (gameState == GameState.IN_GAME)  // Most importantly, not in GAME_LOST
+        {
+            ChangeState(GameState.GAME_WON);
+        }
+    }
+
+    public void TryChangeToLoseState()
+    {
+        if (gameState == GameState.IN_GAME)  // Most importantly, not in GAME_WON
+        {
+            ChangeState(GameState.GAME_LOST);
+        }
+    }
+
+    private void HandlePreGame()
     {
         ChangeState(GameState.IN_GAME);
     }
 
-    public void HandleGameWon()
+    private void HandleGameWon()
     {
         Debug.Log("Game won!");
     }
 
-    public void HandleGameLost()
+    private void HandleGameLost()
     {
-        Debug.Log("Game lost!");
+        Debug.Log($"Game lost! Restarting in {timeAfterLosingToRestart} seconds...");
+        StartCoroutine(HandleGameLostCoroutine());
+    }
+    private IEnumerator HandleGameLostCoroutine()
+    {
+        yield return new WaitForSeconds(timeAfterLosingToRestart);
+        RestartLevel();
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
 

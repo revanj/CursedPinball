@@ -19,7 +19,7 @@ public class BucketManager : Singleton<BucketManager>
         fullBuckets.Add(bucket);
         if (fullBuckets.Count == buckets.Count)
         {
-            GameManager.Instance.ChangeState(GameState.GAME_WON);
+            GameManager.Instance.TryChangeToWinState();
         }
     }
 }

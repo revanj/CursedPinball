@@ -13,6 +13,6 @@ public class LossBucket : MonoBehaviour
             return;
         }
         
-        GameManager.Instance.ChangeState(GameState.GAME_LOST);
+        GameManager.Instance.TryChangeToLoseState();
     }
 }
