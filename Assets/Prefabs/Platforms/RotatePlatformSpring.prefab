@@ -45,12 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b33c16f9cbab6bbb7836161973b138cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorSO: {fileID: 11400000, guid: a672a2fb82e725649b34ea99057290dc, type: 2}
+  colorRenderer: {fileID: 8120659163266144077}
+  colorSystemSO: {fileID: 11400000, guid: 6ebda763c267d3d4983f27b2729c7266, type: 2}
+  moveSpeed: 30
+  rb: {fileID: 8120659163266144079}
   wayPoints:
   - 0
   - 60
-  moveSpeed: 30
-  rb: {fileID: 8120659163266144079}
-  buttonName: A
   _currentWayPoint: 0
 --- !u!1 &8120659163266144065
 GameObject:
@@ -128,7 +130,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.17288662, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

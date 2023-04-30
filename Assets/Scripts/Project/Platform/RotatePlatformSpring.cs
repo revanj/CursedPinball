@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotatePlatformSpring : MonoBehaviour
+public class RotatePlatformSpring : Platform, IRotateable
 {
     [SerializeField] private List<float> wayPoints;
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private string buttonName;
+    public List<float> WayPoints => wayPoints;
+
 
     private int _moveDirection = 1;
     
@@ -17,16 +16,16 @@ public class RotatePlatformSpring : MonoBehaviour
     private void Start()
     {
         _currentWayPoint = 0;
-        for (int i = 0; i < wayPoints.Count; i++)
+        for (int i = 0; i < WayPoints.Count; i++)
         {
-            wayPoints[i] = Mathf.Repeat(wayPoints[i], 360);
+            WayPoints[i] = Mathf.Repeat(WayPoints[i], 360);
         }
-        rb.MoveRotation(wayPoints[0]);
+        rb.MoveRotation(WayPoints[0]);
     }
 
     void FixedUpdate()
     {
-        if (Input.GetKey(CustomUtils.ParseKeyCode(buttonName)))
+        if (Input.GetKey(keyCode))
         {
             _moveDirection = 1;
         }
@@ -35,21 +34,21 @@ public class RotatePlatformSpring : MonoBehaviour
             _moveDirection = -1;
         }
         
-        if ((_moveDirection == 1 && _currentWayPoint == wayPoints.Count)
+        if ((_moveDirection == 1 && _currentWayPoint == WayPoints.Count)
             || (_moveDirection == -1 && _currentWayPoint == 0))
         {
             return;
         }
         var position = rb.transform.eulerAngles.z;
         var targetWayPoint = _moveDirection == 1 ? _currentWayPoint : _currentWayPoint - 1;
-        var wayPointPos = wayPoints[targetWayPoint];
+        var wayPointPos = WayPoints[targetWayPoint];
         var target =
             Mathf.MoveTowardsAngle(
                 position, 
                 wayPointPos,
                 moveSpeed * Time.fixedDeltaTime);
         rb.MoveRotation(target);
-        if (Mathf.Abs(wayPoints[targetWayPoint] - rb.transform.eulerAngles.z) <= 0.1)
+        if (Mathf.Abs(WayPoints[targetWayPoint] - rb.transform.eulerAngles.z) <= 0.1)
         {
             _currentWayPoint += _moveDirection;
         }
@@ -59,9 +58,9 @@ public class RotatePlatformSpring : MonoBehaviour
             _currentWayPoint = 0;
         }
 
-        if (_currentWayPoint == wayPoints.Count)
+        if (_currentWayPoint == WayPoints.Count)
         {
-            _currentWayPoint = wayPoints.Count - 1;
+            _currentWayPoint = WayPoints.Count - 1;
         }
     }
 }
