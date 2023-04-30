@@ -27,7 +27,7 @@ public abstract class Platform : MonoBehaviour
 
     private void OnValidate()
     {
-        colorRenderer.color = colorSO.color;
+        if(colorRenderer) colorRenderer.color = colorSO.color;
     }
 }
 

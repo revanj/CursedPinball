@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class BallLauncher : MonoBehaviour
 {
-    [SerializeField] int ballGroup = 0;
+    [SerializeField] [Required]
+    private ColorSO colorSO;
 
     [SerializeField] Transform launchAtPoint;
     [SerializeField] float launchSpeed = 0f;
@@ -28,7 +30,7 @@ public class BallLauncher : MonoBehaviour
 
     private void LaunchBall()
     {
-        Ball ball = Ball.CreateBall(ballGroup);
+        Ball ball = Ball.CreateBall(colorSO);
         ball.transform.position = transform.position;
         Vector2 launchDirection = (launchAtPoint.position - transform.position).normalized;
         ball.GetComponent<Rigidbody2D>().velocity = launchDirection * launchSpeed;
