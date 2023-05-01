@@ -50,7 +50,11 @@ public class LevelSelectionController : MonoBehaviour
         {
             var button = Instantiate(_buttonPrefab, _buttonParent);
             button.GetComponentInChildren<Text>().text = index.ToString();
-            button.GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene(scene));
+            button.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                SceneManager.MoveGameObjectToScene(GameObject.FindWithTag("Music"), SceneManager.GetActiveScene());
+                SceneManager.LoadScene(scene);
+            });
             _buttons.Add(button);
             index++;
         }
