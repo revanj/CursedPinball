@@ -129,6 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61732026454c48e469ee582cf86fc6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorSO: {fileID: 0}
+  colorSO: {fileID: 11400000, guid: 165a0f8dd8a06cc4fa4b47b2aa1ebade, type: 2}
   launchAtPoint: {fileID: 4512948390884316421}
   launchSpeed: 0

@@ -17,8 +17,7 @@ public class Ball : MonoBehaviour
         this.colorSO = colorSO;
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         if(spriteRenderer) spriteRenderer.color = colorSO.color;
-        Light2D light2D = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
-        if(light2D) light2D.color = colorSO.color;
+
     }
     public static Ball CreateBall(ColorSO colorSO)
     {
