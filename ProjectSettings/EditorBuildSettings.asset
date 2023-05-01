@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelTestSceneTroll.unity
     guid: 491edd8b4a45d1840b9c2add2ee1d4ce
   - enabled: 1
-    path: Assets/Scenes/Levels/Level1.unity
+    path: Assets/Scenes/Levels/Level9.unity
     guid: 00c3905b06467d048be7c34e24ad8ac9
   m_configObjects: {}
