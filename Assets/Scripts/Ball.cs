@@ -21,7 +21,7 @@ public class Ball : MonoBehaviour
     }
     void Update(){
         // Destroy ball if it goes out of screen bounds, and change to lose state
-        if(Utils.IsGameObjectOutOfScreenBounds(this.gameObject, GameManager.Instance.mainCamera)){
+        if(Utils.IsGameObjectOutOfScreenBoundsNotTop(this.gameObject, GameManager.Instance.mainCamera)){
             Destroy(this.gameObject);
             GameManager.Instance.TryChangeToLoseState();
         }
