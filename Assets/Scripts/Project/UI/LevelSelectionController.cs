@@ -24,8 +24,6 @@ public class LevelSelectionController : MonoBehaviour
     private GameObject _exitButton;
     [SerializeField]
     private int _selectedIndex = 0;
-    private bool _isSubmit = false;
-    private bool _isCancel = false;
     public int SelectedIndex
     {
         get => _selectedIndex;
@@ -48,8 +46,6 @@ public class LevelSelectionController : MonoBehaviour
     private void Start()
     {
         int index = 1;
-        _isSubmit = false;
-        _isCancel = false;
         foreach (var scene in _scenes)
         {
             var button = Instantiate(_buttonPrefab, _buttonParent);

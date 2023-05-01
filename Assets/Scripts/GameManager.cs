@@ -10,6 +10,7 @@ public class GameManager: Singleton<GameManager>
     
     GameState gameState;
 
+    public Camera mainCamera;
     public static event Action<GameState> OnGameStateChanged;
     
     void Update()
@@ -23,8 +24,11 @@ public class GameManager: Singleton<GameManager>
         {
             ChangeState(GameState.IN_GAME);
         }
+        //detect whether 
     }
-
+    void Awake(){
+        if(mainCamera == null) mainCamera = FindObjectOfType<Camera>();
+    }
     void Start()
     {
         ChangeState(GameState.PRE_GAME);
