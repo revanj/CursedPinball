@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class Ball : MonoBehaviour
     public ColorSO colorSO;
     public static GameObject ballPrefab;
     public static GameObject ballDiscretePrefab;
+
+    [SerializeField] private AudioSource audioSource;
     void Awake() {
         if(colorSO) Init(colorSO);
     }
@@ -34,5 +37,12 @@ public class Ball : MonoBehaviour
         Ball ball = ballObject.GetComponent<Ball>();
         ball.Init(colorSO);
         return ball;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        audioSource.volume = 1.2f;
+        audioSource.pitch = UnityEngine.Random.Range(.6f, 1.2f);
+        audioSource.PlayOneShot(audioSource.clip);
     }
 }
