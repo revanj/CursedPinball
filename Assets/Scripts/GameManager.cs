@@ -105,6 +105,9 @@ public class GameManager: Singleton<GameManager>
 
     private void RestartLevel()
     {
+        BGM.PreservePrevious = true;
+        GameObject.FindWithTag("Music").transform.parent = null;
+        DontDestroyOnLoad(GameObject.FindWithTag("Music"));
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
