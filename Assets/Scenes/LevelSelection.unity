@@ -158,7 +158,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &170284408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,6 +728,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scenes:
+  - sceneAsset: {fileID: 102900000, guid: 00c3905b06467d048be7c34e24ad8ac9, type: 3}
+    scenePath: Assets/Scenes/Level1New.unity
   - sceneAsset: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
     scenePath: Assets/Scenes/BallBucketTestScene.unity
   - sceneAsset: {fileID: 102900000, guid: 09247297bf753f2229b4f6d5bff68fac, type: 3}
