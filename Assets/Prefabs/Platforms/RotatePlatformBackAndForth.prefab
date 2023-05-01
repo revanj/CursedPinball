@@ -48,7 +48,6 @@ MonoBehaviour:
   colorSO: {fileID: 11400000, guid: a672a2fb82e725649b34ea99057290dc, type: 2}
   colorRenderer: {fileID: 6697603809880946426}
   colorSystemSO: {fileID: 11400000, guid: 6ebda763c267d3d4983f27b2729c7266, type: 2}
-  isColorRequired: 0
   moveSpeed: 30
   rb: {fileID: 6697603809880946424}
   wayPoints:
