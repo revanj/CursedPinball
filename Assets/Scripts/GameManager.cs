@@ -15,7 +15,7 @@ public class GameManager: Singleton<GameManager>
     
     void Update()
     {
-        if (gameState == GameState.IN_GAME && Input.GetKeyDown(KeyCode.R))
+        if ((gameState == GameState.IN_GAME || gameState == GameState.PRE_GAME) && Input.GetKeyDown(KeyCode.R))
         {
             RestartLevel();
         }
