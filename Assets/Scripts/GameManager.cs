@@ -12,6 +12,14 @@ public class GameManager: Singleton<GameManager>
 
     public static event Action<GameState> OnGameStateChanged;
     
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartLevel();
+        }
+    }
+
     void Start()
     {
         ChangeState(GameState.IN_GAME);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,29 @@ public class WinLossTransitionPanel : MonoBehaviour
     [SerializeField] AnimationCurve fadeInCurve;
     [SerializeField] AnimationCurve fadeOutCurve;
 
-    public void FadeIn(FadeType fadeType)
+    void Awake()
     {
-        StartCoroutine(FadeInCoroutine(fadeType));
+        GameManager.OnGameStateChanged += HandleGameStateChanged;
     }
 
-    private IEnumerator FadeInCoroutine(FadeType fadeType)
+    void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= HandleGameStateChanged;
+    }
+
+    private void HandleGameStateChanged(GameState gameState)
+    {
+        if (gameState != GameState.GAME_LOST && gameState != GameState.GAME_WON) { return; }
+
+        Fade(FadeType.FADE_IN);
+    }
+
+    public void Fade(FadeType fadeType)
+    {
+        StartCoroutine(FadeCoroutine(fadeType));
+    }
+
+    private IEnumerator FadeCoroutine(FadeType fadeType)
     {
         AnimationCurve fadeCurve;
         switch (fadeType)
