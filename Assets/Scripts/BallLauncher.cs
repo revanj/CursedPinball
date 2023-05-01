@@ -11,6 +11,7 @@ public class BallLauncher : MonoBehaviour
     [SerializeField] Transform launchAtPoint;
     [SerializeField] float launchSpeed = 0f;
     [SerializeField] bool UseDiscreteRigidbody2d = false;
+    [SerializeField] private AudioSource audioSource;
 
     [SerializeField] Transform colorParent;
 
@@ -37,6 +38,7 @@ public class BallLauncher : MonoBehaviour
         ball.transform.position = transform.position;
         Vector2 launchDirection = launchAtPoint.up;
         ball.GetComponent<Rigidbody2D>().velocity = launchDirection * launchSpeed;
+        audioSource.PlayOneShot(audioSource.clip);
     }
 
     private void OnValidate()

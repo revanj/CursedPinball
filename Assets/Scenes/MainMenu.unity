@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957886340027968917, guid: 7e7d6efedae829648a2680e696810ffc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
+      value: LoadScenePreserveBGM
       objectReference: {fileID: 0}
     - target: {fileID: 7957886340027968917, guid: 7e7d6efedae829648a2680e696810ffc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 633269399}
   m_Layer: 0
   m_Name: BGM
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -778,7 +778,7 @@ AudioSource:
   m_GameObject: {fileID: 633269398}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2072830352587445392, guid: 3e1f02d36a559713dbceb1879b39e1d0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 405eaf3a1500c7b2599aa6400ae19f01, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

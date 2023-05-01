@@ -48,7 +48,6 @@ MonoBehaviour:
   colorSO: {fileID: 11400000, guid: a672a2fb82e725649b34ea99057290dc, type: 2}
   colorRenderer: {fileID: 6697603809880946426}
   colorSystemSO: {fileID: 11400000, guid: 6ebda763c267d3d4983f27b2729c7266, type: 2}
-  isColorRequired: 0
   moveSpeed: 30
   rb: {fileID: 6697603809880946424}
   wayPoints:
@@ -131,7 +130,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.17288662, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
