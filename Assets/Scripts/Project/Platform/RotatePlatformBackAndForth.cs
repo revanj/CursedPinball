@@ -13,6 +13,7 @@ public class RotatePlatformBackAndForth : Platform, IRotateable
 
     private void Start()
     {
+        if (WayPoints.Count == 0) { return; }
         _currentWayPoint = 0;
         for (int i = 0; i < WayPoints.Count; i++)
         {
@@ -28,11 +29,19 @@ public class RotatePlatformBackAndForth : Platform, IRotateable
             return;
         }
         var position = rb.transform.eulerAngles.z;
-        var target = 
-            Mathf.MoveTowardsAngle(
+        float target;
+        if (wayPoints.Count > 0)
+        {
+            target = Mathf.MoveTowardsAngle(
                 position, WayPoints[_currentWayPoint], moveSpeed * Time.fixedDeltaTime
             );
+        }
+        else
+        {
+            target = position - moveSpeed * Time.fixedDeltaTime;
+        }
         rb.MoveRotation(target);
+        if (wayPoints.Count == 0) { return; }
         if (Mathf.Abs(WayPoints[_currentWayPoint] - rb.transform.eulerAngles.z) <= 0.1)
         {
             _currentWayPoint++;
