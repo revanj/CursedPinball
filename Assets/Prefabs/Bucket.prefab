@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 324248935}
   - component: {fileID: 324248936}
   - component: {fileID: 2656491219068559566}
+  - component: {fileID: 7313449501448158478}
   m_Layer: 0
   m_Name: Wall1 (2)
   m_TagString: Untagged
@@ -53,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: fa504aef56de879498f865fcfe41de84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,6 +112,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7313449501448158478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324248934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderTypes: 0
+  normalStrength: 5
+  normalSmoothing: 1
+  computingNormal: 0
 --- !u!1 &599426565
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +139,7 @@ GameObject:
   - component: {fileID: 599426566}
   - component: {fileID: 599426567}
   - component: {fileID: 6303085827420235419}
+  - component: {fileID: 8114953116854803961}
   m_Layer: 0
   m_Name: Wall1
   m_TagString: Untagged
@@ -164,7 +182,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: fa504aef56de879498f865fcfe41de84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -222,6 +240,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8114953116854803961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599426565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderTypes: 3
+  normalStrength: 5
+  normalSmoothing: 1
+  computingNormal: 0
 --- !u!1 &1827614571
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +267,7 @@ GameObject:
   - component: {fileID: 1827614572}
   - component: {fileID: 1827614573}
   - component: {fileID: 6869285737616017581}
+  - component: {fileID: 5008071796412606817}
   m_Layer: 0
   m_Name: Wall1 (1)
   m_TagString: Untagged
@@ -275,7 +310,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: fa504aef56de879498f865fcfe41de84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -333,6 +368,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5008071796412606817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827614571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderTypes: 0
+  normalStrength: 5
+  normalSmoothing: 1
+  computingNormal: 0
 --- !u!1 &2478517258413099000
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe902e2702f808a41b1753f91ffa5206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorSO: {fileID: 0}
+  colorSO: {fileID: 11400000, guid: 165a0f8dd8a06cc4fa4b47b2aa1ebade, type: 2}
   ballsNeeded: 1
 --- !u!50 &6328755226867254001
 Rigidbody2D:
