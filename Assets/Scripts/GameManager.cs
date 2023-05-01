@@ -8,7 +8,7 @@ public class GameManager: Singleton<GameManager>
 {
     [SerializeField] float timeAfterLosingToRestart = 1f;
     
-    GameState gameState;
+    public GameState gameState;
 
     public Camera mainCamera;
     public static event Action<GameState> OnGameStateChanged;
