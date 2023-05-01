@@ -29,8 +29,12 @@ public abstract class Platform : MonoBehaviour
 
     private void OnValidate()
     {
-        if(colorRenderer) colorRenderer.color = colorSO.color;
-
+        if (colorRenderer == null) { return; }
+        SpriteRenderer[] spriteRenderers = colorRenderer.GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers)
+        {
+            spriteRenderer.color = colorSO.color;
+        }
     }
 }
 

@@ -11,6 +11,8 @@ public class Bucket : MonoBehaviour
     [SerializeField] int ballsNeeded = 1;
     int ballsLeft;
 
+    [SerializeField] Transform colorParent;
+
 
     void Awake()
     {
@@ -49,5 +51,15 @@ public class Bucket : MonoBehaviour
     public bool IsFull()
     {
         return ballsLeft <= 0;
+    }
+
+    private void OnValidate()
+    {
+        if (colorParent == null) { return; }
+        SpriteRenderer[] spriteRenderers = colorParent.GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers)
+        {
+            spriteRenderer.color = colorSO.color;
+        }
     }
 }
