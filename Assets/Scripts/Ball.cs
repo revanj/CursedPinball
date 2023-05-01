@@ -19,6 +19,13 @@ public class Ball : MonoBehaviour
         if(spriteRenderer) spriteRenderer.color = colorSO.color;
 
     }
+    void Update(){
+        // Destroy ball if it goes out of screen bounds, and change to lose state
+        if(Utils.IsGameObjectOutOfScreenBounds(this.gameObject, GameManager.Instance.mainCamera)){
+            Destroy(this.gameObject);
+            GameManager.Instance.TryChangeToLoseState();
+        }
+    }
     public static Ball CreateBall(ColorSO colorSO)
     {
         GameObject ballObject = Instantiate(ballPrefab);
