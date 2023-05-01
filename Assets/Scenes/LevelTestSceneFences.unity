@@ -1710,17 +1710,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1574201699848875318, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
+      propertyPath: colorSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 8236c46588127d54dac0fc9eb5201731, type: 2}
     - target: {fileID: 4733776784988908157, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
     - target: {fileID: 4733776784988908158, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733776784988908158, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4733776784988908158, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4733776784988908159, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_RootOrder
@@ -1766,7 +1774,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6952567955671559932, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
 --- !u!1 &727468490
 GameObject:
@@ -2249,17 +2258,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -790904049835686791, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574201699848875318, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
+      propertyPath: colorSO
+      value: 
+      objectReference: {fileID: 11400000, guid: a672a2fb82e725649b34ea99057290dc, type: 2}
     - target: {fileID: 4733776784988908157, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_Name
       value: Ball (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4733776784988908158, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
-      propertyPath: m_Color.b
+      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4733776784988908158, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733776784988908158, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4733776784988908158, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
       propertyPath: m_Color.r
@@ -2309,7 +2330,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5258979163488208325, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -6952567955671559932, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a14583fedd375f44c9c8b278591fb3b4, type: 3}
 --- !u!1001 &1121734614
 PrefabInstance:
@@ -2605,6 +2631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bucket (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2478517258413099001, guid: 600ba647a20973143908e33d5a381e72, type: 3}
+      propertyPath: colorSO
+      value: 
+      objectReference: {fileID: 11400000, guid: a672a2fb82e725649b34ea99057290dc, type: 2}
     - target: {fileID: 2478517258413099004, guid: 600ba647a20973143908e33d5a381e72, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -3958,6 +3988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bucket
       objectReference: {fileID: 0}
+    - target: {fileID: 2478517258413099001, guid: 600ba647a20973143908e33d5a381e72, type: 3}
+      propertyPath: colorSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 8236c46588127d54dac0fc9eb5201731, type: 2}
     - target: {fileID: 2478517258413099004, guid: 600ba647a20973143908e33d5a381e72, type: 3}
       propertyPath: m_RootOrder
       value: 3

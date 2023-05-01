@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.Rendering.Universal;
+
 public abstract class Platform : MonoBehaviour
 {
     [SerializeField]
@@ -28,6 +30,7 @@ public abstract class Platform : MonoBehaviour
     private void OnValidate()
     {
         if(colorRenderer) colorRenderer.color = colorSO.color;
+
     }
 }
 
