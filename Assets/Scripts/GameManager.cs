@@ -18,11 +18,16 @@ public class GameManager: Singleton<GameManager>
         {
             RestartLevel();
         }
+
+        if (gameState == GameState.PRE_GAME && Input.GetKeyDown(KeyCode.Space))
+        {
+            ChangeState(GameState.IN_GAME);
+        }
     }
 
     void Start()
     {
-        ChangeState(GameState.IN_GAME);
+        ChangeState(GameState.PRE_GAME);
     }
 
     public void ChangeState(GameState newState)
@@ -75,7 +80,7 @@ public class GameManager: Singleton<GameManager>
 
     private void HandlePreGame()
     {
-        ChangeState(GameState.IN_GAME);
+        
     }
 
     private void HandleGameWon()
