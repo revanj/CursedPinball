@@ -132,3 +132,4 @@ MonoBehaviour:
   colorSO: {fileID: 11400000, guid: 165a0f8dd8a06cc4fa4b47b2aa1ebade, type: 2}
   launchAtPoint: {fileID: 4512948390884316421}
   launchSpeed: 0
+  colorParent: {fileID: 4512948391928194689}
