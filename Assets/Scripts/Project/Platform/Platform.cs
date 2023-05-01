@@ -8,7 +8,7 @@ public abstract class Platform : MonoBehaviour
 {
     [SerializeField]
     [Required]
-    protected ColorSO colorSO;
+    public ColorSO colorSO;
     [SerializeField]
     [Required]
     protected SpriteRenderer colorRenderer;
