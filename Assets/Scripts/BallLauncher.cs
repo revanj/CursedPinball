@@ -10,6 +10,7 @@ public class BallLauncher : MonoBehaviour
 
     [SerializeField] Transform launchAtPoint;
     [SerializeField] float launchSpeed = 0f;
+    [SerializeField] bool UseDiscreteRigidbody2d = false;
 
     [SerializeField] Transform colorParent;
 
@@ -32,7 +33,7 @@ public class BallLauncher : MonoBehaviour
 
     private void LaunchBall()
     {
-        Ball ball = Ball.CreateBall(colorSO);
+        Ball ball = Ball.CreateBall(colorSO, UseDiscreteRigidbody2d);
         ball.transform.position = transform.position;
         Vector2 launchDirection = launchAtPoint.up;
         ball.GetComponent<Rigidbody2D>().velocity = launchDirection * launchSpeed;

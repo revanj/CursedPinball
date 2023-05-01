@@ -213,6 +213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4926981726722959049, guid: 47bec73a79dbe514db4ee6a0723c51a8, type: 3}
+      propertyPath: ballDiscretePrefab
+      value: 
+      objectReference: {fileID: 4542774303450557675, guid: 5d6b458445a54e44689b44482009f446, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47bec73a79dbe514db4ee6a0723c51a8, type: 3}
 --- !u!4 &5066692837308418436 stripped

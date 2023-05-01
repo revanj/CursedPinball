@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     [Required]
     public ColorSO colorSO;
     public static GameObject ballPrefab;
+    public static GameObject ballDiscretePrefab;
     void Awake() {
         if(colorSO) Init(colorSO);
     }
@@ -26,9 +27,10 @@ public class Ball : MonoBehaviour
             GameManager.Instance.TryChangeToLoseState();
         }
     }
-    public static Ball CreateBall(ColorSO colorSO)
+    public static Ball CreateBall(ColorSO colorSO, bool UseDiscreteRigidbody2d)
     {
-        GameObject ballObject = Instantiate(ballPrefab);
+        GameObject ballPrefab_ = UseDiscreteRigidbody2d ? Ball.ballDiscretePrefab : Ball.ballPrefab;
+        GameObject ballObject = Instantiate(ballPrefab_);
         Ball ball = ballObject.GetComponent<Ball>();
         ball.Init(colorSO);
         return ball;
