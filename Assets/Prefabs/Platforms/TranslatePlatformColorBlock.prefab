@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72c00dfbda1c7744bf027435bf8629f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isColorRequired: 1
   colorSO: {fileID: 0}
   _collider2D: {fileID: 6292663460531555797}
 --- !u!1 &6292663460531555794
