@@ -24,7 +24,7 @@ public class WinLossTransitionPanel : MonoBehaviour
 
     private void HandleGameStateChanged(GameState gameState)
     {
-        if (gameState != GameState.GAME_LOST && gameState != GameState.GAME_WON) { return; }
+        if (gameState != GameState.GAME_LOST) { return; }
 
         Fade(FadeType.FADE_IN);
     }
