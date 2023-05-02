@@ -52,6 +52,7 @@ public class LevelSelectionController : MonoBehaviour
             button.GetComponentInChildren<Text>().text = index.ToString();
             button.GetComponent<Button>().onClick.AddListener(() =>
             {
+                BGM.PreservePrevious = false;
                 SceneManager.MoveGameObjectToScene(GameObject.FindWithTag("Music"), SceneManager.GetActiveScene());
                 SceneManager.LoadScene(scene);
             });
