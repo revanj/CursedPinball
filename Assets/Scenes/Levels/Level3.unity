@@ -2710,5 +2710,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: _sceneToLoad.scenePath
+      value: Assets/Scenes/Levels/Level4.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: _sceneToLoad.sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 191adf49eef73ed41a74143b56deba84, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}

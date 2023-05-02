@@ -3754,5 +3754,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: PreservePreviousBGM
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: _sceneToLoad.scenePath
+      value: Assets/Scenes/Levels/Level7.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: _sceneToLoad.sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: a9ec57d3925310b40926153d2fc6e755, type: 3}
+    - target: {fileID: 4637724789666854203, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637724789666854203, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637724789666854203, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3622863066414163607}
+    - target: {fileID: 4637724789666854203, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637724789666854203, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637724789666854203, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637724789666854203, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+--- !u!114 &3622863066414163607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+  m_PrefabInstance: {fileID: 3622863066414163606}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbea7fbaa3da07d49872f4bdbdc6fe7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

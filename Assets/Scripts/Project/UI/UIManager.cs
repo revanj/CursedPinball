@@ -8,6 +8,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private float winWaitTime = 1f;
     [SerializeField] private GameObject keyTipText;
     [SerializeField] private GameObject restartTipText;
+    [SerializeField] private GameObject startTipText;
 
     void Awake()
     {
@@ -23,7 +24,12 @@ public class UIManager : Singleton<UIManager>
     {
         switch(GameManager.Instance.gameState){
             case GameState.IN_GAME:
+                startTipText.SetActive(false);
                 keyTipText.SetActive(true);
+                break;
+            case GameState.PRE_GAME:
+                startTipText.SetActive(true);
+                keyTipText.SetActive(false);
                 restartTipText.SetActive(false);
                 break;
             case GameState.GAME_LOST:
@@ -33,6 +39,7 @@ public class UIManager : Singleton<UIManager>
                 DisplayGameWinScreen();
                 break;
             default:
+                startTipText.SetActive(false);
                 keyTipText.SetActive(false);
                 restartTipText.SetActive(false);
                 break;
@@ -53,5 +60,9 @@ public class UIManager : Singleton<UIManager>
 
     public void ShowRestartTip(){
         restartTipText.SetActive(true);
+    }
+    
+    public void HideStartTip(){
+        startTipText.SetActive(false);
     }
 }
