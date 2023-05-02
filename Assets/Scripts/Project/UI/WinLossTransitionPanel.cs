@@ -25,10 +25,17 @@ public class WinLossTransitionPanel : MonoBehaviour
 
     private void HandleGameStateChanged(GameState gameState)
     {
-        if (gameState != GameState.GAME_LOST) { return; }
-
-        StartCoroutine(FadeDelay());
-        
+        switch (gameState)
+        {
+            case GameState.GAME_LOST:
+                StartCoroutine(FadeDelay());
+                break;
+            case GameState.PRE_GAME:
+                Fade(FadeType.FADE_OUT);
+                break;
+            default:
+                break;
+        }
     }
 
     public void Fade(FadeType fadeType)

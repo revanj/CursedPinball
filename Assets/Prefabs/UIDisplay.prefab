@@ -344,8 +344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionPanel: {fileID: 3622863066262531519}
-  fadeTime: 1
-  fadeDelay: 0.5
+  fadeTime: 0.15
+  fadeDelay: 0.25
   fadeInCurve:
     serializedVersion: 2
     m_Curve:
