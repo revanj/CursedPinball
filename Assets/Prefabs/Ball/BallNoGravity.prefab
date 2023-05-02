@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 1574201699848875318}
   - component: {fileID: -790904049835686791}
   - component: {fileID: 8409596289615949971}
+  - component: {fileID: -2542036505203051429}
   m_Layer: 0
   m_Name: BallNoGravity
   m_TagString: Untagged
@@ -303,3 +304,18 @@ MonoBehaviour:
   normalStrength: 5
   normalSmoothing: 1
   computingNormal: 0
+--- !u!114 &-2542036505203051429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733776784988908157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26cfacf0e197d154aa82e28649cca633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+  pixelPrefab: {fileID: 4733776784988908157, guid: cbb19c3608c0c65448cf4991ed6076a9, type: 3}
+  numberOfPixels: 200
