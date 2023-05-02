@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class TranslatePlatformSpring : Platform, ITranslateable
     [SerializeField] private List<Transform> wayPoints;
     public List<Transform> WayPoints => wayPoints;
 
-
+    private bool keydown;
     private int _moveDirection = 1;
     
     public int _currentWayPoint = 0;
@@ -20,9 +21,14 @@ public class TranslatePlatformSpring : Platform, ITranslateable
         rb.MovePosition(WayPoints[0].position);
     }
 
+    private void Update()
+    {
+        keydown = Input.GetKey(keyCode);
+    }
+
     void FixedUpdate()
     {
-        if (Input.GetKey(keyCode))
+        if (keydown)
         {
             _moveDirection = 1;
         }

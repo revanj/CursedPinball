@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class RotatePlatformSpring : Platform, IRotateable
 {
     [SerializeField] private List<float> wayPoints;
     public List<float> WayPoints => wayPoints;
+    private bool keyDown;
 
 
     private int _moveDirection = 1;
@@ -23,9 +25,15 @@ public class RotatePlatformSpring : Platform, IRotateable
         rb.MoveRotation(WayPoints[0]);
     }
 
+
+    private void Update()
+    {
+        keyDown = Input.GetKey(keyCode);
+    }
+
     void FixedUpdate()
     {
-        if (Input.GetKey(keyCode))
+        if (keyDown)
         {
             _moveDirection = 1;
         }
