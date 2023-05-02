@@ -3799,6 +3799,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 612926871004407662, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_text
+      value: 'Keys:
+
+        :)'
+      objectReference: {fileID: 0}
     - target: {fileID: 3622863067843015121, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: m_Name
       value: UIDisplay
@@ -3851,9 +3857,13 @@ PrefabInstance:
       propertyPath: m_text
       value: LEVEL EX-1
       objectReference: {fileID: 0}
+    - target: {fileID: 4011826507800377748, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: _sceneToLoad.scenePath
-      value: Assets/Scenes/Levels/SpecialLevel/LevelPlinko.unity
+      value: Assets/Scenes/Levels/SpecialLevel/Level20.unity
       objectReference: {fileID: 0}
     - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: _sceneToLoad.sceneAsset
@@ -3890,10 +3900,6 @@ PrefabInstance:
     - target: {fileID: 5504028215260663405, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: m_text
       value: LEVEL 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8410243851638125676, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
