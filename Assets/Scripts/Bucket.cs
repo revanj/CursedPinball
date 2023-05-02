@@ -12,8 +12,8 @@ public class Bucket : MonoBehaviour
     int ballsLeft;
 
     [SerializeField] Transform colorParent;
-
-
+    [Tooltip("If true, the bucket will destory the ball")]
+    [SerializeField] private bool isDestroyOnFull = false;
     void Awake()
     {
         ballsLeft = ballsNeeded;
@@ -45,6 +45,10 @@ public class Bucket : MonoBehaviour
         if (IsFull())
         {
             BucketManager.Instance.AddFullBucket(this);
+        }
+        if(isDestroyOnFull)
+        {
+            Destroy(ball.gameObject);
         }
     }
 
