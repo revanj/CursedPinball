@@ -44,7 +44,6 @@ public class UIManager : Singleton<UIManager>
                 restartTipText.SetActive(false);
                 break;
         }
-
     }
 
     private void DisplayGameWinScreen()

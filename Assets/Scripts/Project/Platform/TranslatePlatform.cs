@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class TranslatePlatform : Platform, ITranslateable
 
 
     private int _currentWayPoint = 0;
+
+    private bool keydown;
     
 
     private void Start()
@@ -19,9 +22,15 @@ public class TranslatePlatform : Platform, ITranslateable
         rb.MovePosition(WayPoints[0].position);
     }
 
+
+    private void Update()
+    {
+        keydown = Input.GetKey(keyCode);
+    }
+
     void FixedUpdate()
     {
-        if (!Input.GetKey(keyCode))
+        if (!keydown)
         {
             return;
         }
