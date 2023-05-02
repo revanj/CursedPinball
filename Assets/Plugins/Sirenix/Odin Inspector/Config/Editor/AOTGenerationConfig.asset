@@ -16,7 +16,7 @@ MonoBehaviour:
   deleteDllAfterBuilds: 1
   AutomateForAllAOTPlatforms: 1
   automateForPlatforms: 0900000014000000
-  lastScan: 638185777452149984
+  lastScan: 638186491450437128
   supportSerializedTypes:
   - TypeName: ColorSO, Assembly-CSharp
     IsCustom: 0
