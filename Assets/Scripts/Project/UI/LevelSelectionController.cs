@@ -49,7 +49,14 @@ public class LevelSelectionController : MonoBehaviour
         foreach (var scene in _scenes)
         {
             var button = Instantiate(_buttonPrefab, _buttonParent);
-            button.GetComponentInChildren<Text>().text = index.ToString();
+            if (index >= 6)  // Hardcoded
+            {
+                button.GetComponentInChildren<Text>().text = "EX-" + (index - 5).ToString();
+            }
+            else
+            {
+                button.GetComponentInChildren<Text>().text = index.ToString();
+            }
             button.GetComponent<Button>().onClick.AddListener(() =>
             {
                 BGM.PreservePrevious = false;
