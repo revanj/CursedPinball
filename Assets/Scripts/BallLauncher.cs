@@ -7,7 +7,8 @@ public class BallLauncher : MonoBehaviour
 {
     [SerializeField] [Required]
     private ColorSO colorSO;
-
+    [SerializeField]
+    private float delayTime = 0f;
     [SerializeField] Transform launchAtPoint;
     [SerializeField] float launchSpeed = 0f;
     [SerializeField] bool UseDiscreteRigidbody2d = false;
@@ -29,7 +30,14 @@ public class BallLauncher : MonoBehaviour
     {
         if (gameState != GameState.IN_GAME) { return; }
 
-        LaunchBall();
+        if(delayTime > 0f)
+        {
+            StartCoroutine(DelayLaunch());
+        }
+        else
+        {
+            LaunchBall();
+        }
     }
 
     private void LaunchBall()
@@ -49,5 +57,11 @@ public class BallLauncher : MonoBehaviour
         {
             spriteRenderer.color = colorSO.color;
         }
+    }
+
+    IEnumerator DelayLaunch()
+    {
+        yield return new WaitForSeconds(delayTime);
+        LaunchBall();
     }
 }
