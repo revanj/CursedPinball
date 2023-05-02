@@ -60,6 +60,10 @@ public class UIManager : Singleton<UIManager>
     public void ShowRestartTip(){
         restartTipText.SetActive(true);
     }
+
+    public void HideRestartTip(){
+        restartTipText.SetActive(false);
+    }
     
     public void HideStartTip(){
         startTipText.SetActive(false);

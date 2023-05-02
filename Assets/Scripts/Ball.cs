@@ -48,6 +48,15 @@ public class Ball : MonoBehaviour
             UIManager.Instance.ShowRestartTip();
         }
     }
+
+    void LateUpdate()
+    {
+        if (time == 0f)
+        {
+            UIManager.Instance.HideRestartTip();
+        }
+    }
+
     public static Ball CreateBall(ColorSO colorSO, bool UseDiscreteRigidbody2d)
     {
         GameObject ballPrefab_ = UseDiscreteRigidbody2d ? Ball.ballDiscretePrefab : Ball.ballPrefab;
