@@ -1352,6 +1352,10 @@ PrefabInstance:
       propertyPath: _sceneToLoad.sceneAsset
       value: 
       objectReference: {fileID: 102900000, guid: 74009871f36ad4f4e93ff8cb48c9c0e8, type: 3}
+    - target: {fileID: 5504028215260663405, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_text
+      value: LEVEL 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
 --- !u!1001 &5266398329015422312
