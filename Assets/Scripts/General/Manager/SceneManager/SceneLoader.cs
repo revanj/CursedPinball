@@ -12,10 +12,14 @@ public class SceneLoader : MonoBehaviour
     {
         if (PreservePreviousBGM)
         {
+            BGM.PreservePrevious = true;
+            GameObject.FindWithTag("Music").transform.parent = null;
             DontDestroyOnLoad(GameObject.FindWithTag("Music"));
         }
         else
         {
+            BGM.PreservePrevious = false;
+            GameObject.FindWithTag("Music").transform.parent = null;
             SceneManager.MoveGameObjectToScene(GameObject.FindWithTag("Music"), SceneManager.GetActiveScene());
         }
         SceneManager.LoadScene(_sceneToLoad);
