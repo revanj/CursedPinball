@@ -2379,6 +2379,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3989683443404962402, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_text
+      value: LEVEL 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: _sceneToLoad.scenePath
       value: Assets/Scenes/Levels/Level2.unity
