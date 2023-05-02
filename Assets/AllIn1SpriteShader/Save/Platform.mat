@@ -104,7 +104,7 @@ Material:
     - _DistortAmount: 0.5
     - _DistortTexXSpeed: 5
     - _DistortTexYSpeed: 5
-    - _EditorDrawers: 0
+    - _EditorDrawers: 2
     - _FadeAmount: -0.1
     - _FadeBurnGlow: 2
     - _FadeBurnTransition: 0.075
@@ -118,7 +118,7 @@ Material:
     - _GhostTransparency: 0
     - _GlitchAmount: 3
     - _GlitchSize: 1
-    - _Glow: 3
+    - _Glow: 1.4
     - _GlowGlobal: 1
     - _GradBlend: 1
     - _GradBoostX: 1.2
