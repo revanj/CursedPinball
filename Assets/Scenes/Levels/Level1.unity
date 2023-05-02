@@ -2317,6 +2317,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 612926871004407662, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: m_text
+      value: 'Keys:
+
+        a - Red'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499122649797560167, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: _nextLevel.scenePath
+      value: Assets/Scenes/Levels/Level2.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499122649797560167, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
+      propertyPath: _nextLevel.sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 1134cad67d04dd846957c23da26b727a, type: 3}
     - target: {fileID: 3622863067843015121, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: m_Name
       value: UIDisplay
