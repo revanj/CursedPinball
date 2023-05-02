@@ -12,10 +12,8 @@ public class Destroyable : MonoBehaviour
     {
         _collider2D = GetComponent<Collider2D>();
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!other.TryGetComponent<Ball>(out Ball ball))
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (!other.gameObject.TryGetComponent<Ball>(out Ball ball))
         {
             return;
         }

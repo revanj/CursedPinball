@@ -143,9 +143,9 @@ GameObject:
   - component: {fileID: 1574201699848875318}
   - component: {fileID: -790904049835686791}
   - component: {fileID: 8409596289615949971}
-  - component: {fileID: 314697436640127639}
+  - component: {fileID: -2542036505203051429}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: BallNoGravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 4733776784988908157}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 7ba25028f21b8e9449d8ff4db674fa66, type: 2}
+  m_Material: {fileID: 6200000, guid: 6fd4362d78f493946a39e20f06d7c0dc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -250,9 +250,9 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 6fd4362d78f493946a39e20f06d7c0dc, type: 2}
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
   normalStrength: 5
   normalSmoothing: 1
   computingNormal: 0
---- !u!114 &314697436640127639
+--- !u!114 &-2542036505203051429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

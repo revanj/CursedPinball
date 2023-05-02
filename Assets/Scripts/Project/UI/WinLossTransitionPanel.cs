@@ -8,6 +8,7 @@ public class WinLossTransitionPanel : MonoBehaviour
 {
     [SerializeField] Image transitionPanel;
     [SerializeField] float fadeTime;
+    [SerializeField] float fadeDelay;
 
     [SerializeField] AnimationCurve fadeInCurve;
     [SerializeField] AnimationCurve fadeOutCurve;
@@ -26,14 +27,19 @@ public class WinLossTransitionPanel : MonoBehaviour
     {
         if (gameState != GameState.GAME_LOST) { return; }
 
-        Fade(FadeType.FADE_IN);
+        StartCoroutine(FadeDelay());
+        
     }
 
     public void Fade(FadeType fadeType)
     {
         StartCoroutine(FadeCoroutine(fadeType));
     }
-
+    private IEnumerator FadeDelay()
+    {
+        yield return new WaitForSeconds(fadeDelay);
+        Fade(FadeType.FADE_IN);
+    }
     private IEnumerator FadeCoroutine(FadeType fadeType)
     {
         AnimationCurve fadeCurve;
