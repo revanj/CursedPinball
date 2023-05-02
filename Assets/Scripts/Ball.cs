@@ -15,29 +15,36 @@ public class Ball : MonoBehaviour
     private float time = 0;
 
     [SerializeField] private AudioSource audioSource;
-    void Awake() {
-        if(colorSO) Init(colorSO);
+    void Awake()
+    {
+        if (colorSO) Init(colorSO);
     }
-    void Init(ColorSO colorSO){
+    void Init(ColorSO colorSO)
+    {
         this.colorSO = colorSO;
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        if(spriteRenderer) spriteRenderer.color = colorSO.color;
+        if (spriteRenderer) spriteRenderer.color = colorSO.color;
 
     }
-    void Update(){
+    void Update()
+    {
         // Destroy ball if it goes out of screen bounds, and change to lose state
-        if(Utils.IsGameObjectOutOfScreenBoundsNotTop(this.gameObject, GameManager.Instance.mainCamera)){
-            Destroy(this.gameObject);
+        if (Utils.IsGameObjectOutOfScreenBoundsNotTop(this.gameObject, GameManager.Instance.mainCamera))
+        {
+            Explode();
             GameManager.Instance.TryChangeToLoseState();
         }
-        if(GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f){
+        if (GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f)
+        {
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             time += Time.deltaTime;
         }
-        else{
+        else
+        {
             time = 0f;
         }
-        if(time > 3f){
+        if (time > 3f)
+        {
             UIManager.Instance.ShowRestartTip();
         }
     }
@@ -56,5 +63,12 @@ public class Ball : MonoBehaviour
         audioSource.pitch = UnityEngine.Random.Range(.6f, 1.2f);
         audioSource.PlayOneShot(audioSource.clip);
     }
-    
+
+    public void Explode()
+    {
+        PixelExplosion pixelExplosion = GetComponent<PixelExplosion>();
+        if (pixelExplosion) pixelExplosion.Explode();
+        else Destroy(gameObject);
+    }
+
 }

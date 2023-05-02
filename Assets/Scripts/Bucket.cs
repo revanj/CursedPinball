@@ -48,7 +48,7 @@ public class Bucket : MonoBehaviour
         }
         if(isDestroyOnFull)
         {
-            Destroy(ball.gameObject);
+            ball.GetComponent<Ball>().Explode();
         }
     }
 
