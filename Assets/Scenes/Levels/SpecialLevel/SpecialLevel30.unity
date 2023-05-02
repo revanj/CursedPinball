@@ -4376,12 +4376,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: _sceneToLoad.scenePath
-      value: Assets/Scenes/Levels/Level1.unity
+      value: Assets/Scenes/Levels/SpecialLevel/Level40.unity
       objectReference: {fileID: 0}
     - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: _sceneToLoad.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: 574591628b4576344b0422d6c431a91d, type: 3}
+      objectReference: {fileID: 102900000, guid: 00c3905b06467d048be7c34e24ad8ac9, type: 3}
     - target: {fileID: 4637724789666854203, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1

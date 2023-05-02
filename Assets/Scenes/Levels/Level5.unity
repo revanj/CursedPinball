@@ -3790,12 +3790,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: _sceneToLoad.scenePath
-      value: Assets/Scenes/Levels/Level3.unity
+      value: Assets/Scenes/Levels/SpecialLevel/Level10Piano.unity
       objectReference: {fileID: 0}
     - target: {fileID: 4118895522615022941, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: _sceneToLoad.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: fa3cb9571cb86c74ca3beeea492ff124, type: 3}
+      objectReference: {fileID: 102900000, guid: 74009871f36ad4f4e93ff8cb48c9c0e8, type: 3}
     - target: {fileID: 4637724789666854203, guid: d93ecd22ebbd89e45be0cb10ce1b1cec, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
