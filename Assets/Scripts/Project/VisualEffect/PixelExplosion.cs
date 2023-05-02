@@ -8,12 +8,10 @@ public class PixelExplosion : MonoBehaviour
 
     public GameObject pixelPrefab;
     public int numberOfPixels = 100;
-    private void OnDestroy() {
-        colorSO = GetComponent<Ball>().colorSO;
-        Explode();
-    }
+
     public void Explode()
     {
+        colorSO = GetComponent<Ball>().colorSO;
         for (int i = 0; i < numberOfPixels; i++)
         {
             GameObject pixel = Instantiate(pixelPrefab, transform.position, Quaternion.identity);
