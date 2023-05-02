@@ -30,12 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level6.unity
     guid: 00c3905b06467d048be7c34e24ad8ac9
   - enabled: 1
-    path: Assets/Scenes/Levels/Level7.unity
+    path: Assets/Scenes/Levels/SpecialLevel/SpecialLevel2.unity
     guid: a9ec57d3925310b40926153d2fc6e755
   - enabled: 1
     path: Assets/Scenes/Levels/SpecialLevel/LevelPiano.unity
     guid: 74009871f36ad4f4e93ff8cb48c9c0e8
   - enabled: 1
-    path: Assets/Scenes/Levels/SpecialLevel/LevelPlinko.unity
+    path: Assets/Scenes/Levels/Level7.unity
     guid: 9b0594dad4e75864cada15f231151697
   m_configObjects: {}
