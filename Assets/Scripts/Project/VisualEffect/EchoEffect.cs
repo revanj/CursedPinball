@@ -15,7 +15,7 @@ public class EchoEffect : MonoBehaviour
     public GameObject[] echo;
     void Start()
     {
-        colorSO = GetComponent<Ball>().colorSO;
+        if(GetComponent<Ball>() != null) colorSO = GetComponent<Ball>().colorSO;
     }
     void Update()
     {
