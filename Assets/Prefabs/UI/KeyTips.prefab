@@ -70,9 +70,9 @@ MonoBehaviour:
 
     a - Red
 
-    s - green
+    s - Blue
 
-    d - blue'
+    d - Pink'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01c883d397aa79e42aad818953aa623f, type: 2}
   m_sharedMaterial: {fileID: 575367599464001456, guid: 01c883d397aa79e42aad818953aa623f, type: 2}

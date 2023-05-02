@@ -573,8 +573,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6697603809880946426, guid: df88067ef443d69509c66b744995da5b, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697603809880946426, guid: df88067ef443d69509c66b744995da5b, type: 3}
       propertyPath: m_Color.r
-      value: 0.05490196
+      value: 0.005926132
       objectReference: {fileID: 0}
     - target: {fileID: 6697603809880946426, guid: df88067ef443d69509c66b744995da5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1532,7 +1536,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: AllIn1SpriteShader/AllIn1SpriteShader
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - GLOW_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -1640,7 +1645,7 @@ Material:
     - _GhostTransparency: 0
     - _GlitchAmount: 3
     - _GlitchSize: 1
-    - _Glow: 10
+    - _Glow: 3
     - _GlowGlobal: 1
     - _GradBlend: 1
     - _GradBoostX: 1.2
