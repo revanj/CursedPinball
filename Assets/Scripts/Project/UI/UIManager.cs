@@ -29,7 +29,7 @@ public class UIManager : Singleton<UIManager>
                 break;
             case GameState.PRE_GAME:
                 startTipText.SetActive(true);
-                keyTipText.SetActive(false);
+                keyTipText.SetActive(true);  // Changed to true
                 restartTipText.SetActive(false);
                 break;
             case GameState.GAME_LOST:
