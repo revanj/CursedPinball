@@ -1014,9 +1014,21 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
-      propertyPath: wayPoints.Array.size
-      value: 3
+      propertyPath: customStartPos
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+      propertyPath: wayPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+      propertyPath: wayPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 650774278}
+    - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+      propertyPath: wayPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 650774277}
     - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
       propertyPath: wayPoints.Array.data[2]
       value: 
@@ -1036,6 +1048,10 @@ PrefabInstance:
     - target: {fileID: 6292663460531555798, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
       propertyPath: m_Color.r
       value: 0.007843138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292663460556449031, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6292663460556449032, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1110,6 +1126,11 @@ PrefabInstance:
 --- !u!4 &650774277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6292663461077395098, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+  m_PrefabInstance: {fileID: 650774276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &650774278 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6292663460899195207, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
   m_PrefabInstance: {fileID: 650774276}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &836701490
@@ -2723,9 +2744,21 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
-      propertyPath: wayPoints.Array.size
-      value: 3
+      propertyPath: customStartPos
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+      propertyPath: wayPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+      propertyPath: wayPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1069895448}
+    - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+      propertyPath: wayPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1783138755}
     - target: {fileID: 4476283368801210421, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
       propertyPath: wayPoints.Array.data[2]
       value: 
@@ -2740,6 +2773,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6292663460531555798, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
       propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292663460556449031, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6292663460556449032, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
@@ -2812,6 +2849,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+--- !u!4 &1783138755 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6292663460899195207, guid: c985ff4761f70b74580d41696511ff2b, type: 3}
+  m_PrefabInstance: {fileID: 1783138754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1820006950
 PrefabInstance:
   m_ObjectHideFlags: 0

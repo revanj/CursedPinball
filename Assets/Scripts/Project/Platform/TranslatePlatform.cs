@@ -14,12 +14,17 @@ public class TranslatePlatform : Platform, ITranslateable
     private int _currentWayPoint = 0;
 
     private bool keydown;
-    
+
+    [SerializeField] private bool customStartPos = false;
+
 
     private void Start()
     {
         _currentWayPoint = 0;
-        rb.MovePosition(WayPoints[0].position);
+        if (!customStartPos)
+        {
+            rb.MovePosition(WayPoints[0].position);
+        }
     }
 
 

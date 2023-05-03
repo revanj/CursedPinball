@@ -340,6 +340,7 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 6292663460556449032}
   - {fileID: 6292663460899195207}
+  customStartPos: 0
 --- !u!1 &6292663461077395097
 GameObject:
   m_ObjectHideFlags: 0
